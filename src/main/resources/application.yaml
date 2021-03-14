@@ -11,5 +11,5 @@ spring:
   thymeleaf:
     cache: false
 
-
-
+mybatis:
+  type-aliases-package: com.example.iterview.model
