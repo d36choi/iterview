@@ -5,12 +5,18 @@ import org.apache.ibatis.type.Alias;
 
 @Data
 @Alias("question")
-@AllArgsConstructor
 @Getter @Setter @ToString
+@AllArgsConstructor
 @EqualsAndHashCode(of = "id")
 public class Question {
-    private Long id;
+    private int id;
     private String query;
     private int tagId;
     private String answer;
+
+    public Question(String query, int tagId, String answer) {
+        this.query = query;
+        this.tagId = tagId;
+        this.answer = answer;
+    }
 }

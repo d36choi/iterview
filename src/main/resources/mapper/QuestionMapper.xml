@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--http://tech.javacafe.io/2018/07/31/mybatis-with-spring/-->
+<mapper namespace="com.example.iterview.mapper.QuestionMapper">
+<!--    <resultMap id="questionMap" type="com.example.iterview.model.Question">-->
+<!--        <result property="id" column="id"/>-->
+<!--        <result property="query" column="query"/>-->
+<!--        <result property="tagId" column="tagId"/>-->
+<!--        <result property="answer" column="answer"/>-->
+<!--    </resultMap>-->
+
+    <select id="selectQuestionById" resultType="question">
+        SELECT q.id,q.query,q.tagId,q.answer
+        FROM QUESTION q
+        WHERE ID = #{id}
+    </select>
+    <select id="selectAllQuestion" resultType="question">
+        SELECT id,query,tagId,answer FROM QUESTION
+    </select>
+    <insert id="insertQuestion" parameterType="question">
+        INSERT INTO QUESTION (QUERY,TAGID,ANSWER)
+        VALUES(#{query},#{tagId},#{answer})
+    </insert>
+</mapper>
