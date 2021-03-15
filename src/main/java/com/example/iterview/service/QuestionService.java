@@ -1,5 +1,6 @@
 package com.example.iterview.service;
 
+import com.example.iterview.dto.QuestionDto;
 import com.example.iterview.model.Question;
 import com.example.iterview.mapper.QuestionMapper;
 import org.springframework.stereotype.Service;
@@ -24,7 +25,7 @@ public class QuestionService {
         return questionMapper.selectAllQuestion();
     }
 
-    public void addQuestion(Question question) {
+    public void addQuestion(QuestionDto question) {
         questionMapper.insertQuestion(question);
     }
 }

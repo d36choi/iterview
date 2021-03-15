@@ -1,8 +1,7 @@
 package com.example.iterview.service;
 
-import com.example.iterview.model.Question;
+import com.example.iterview.dto.QuestionDto;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ class QuestionServiceTest {
 
     @Test
     void addQuestion() {
-        questionService.addQuestion(new Question("test",1,"answer"));
+        questionService.addQuestion(new QuestionDto("test",1,"answer"));
     }
 
     @Test
