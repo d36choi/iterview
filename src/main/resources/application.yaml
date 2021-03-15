@@ -11,5 +11,8 @@ spring:
   thymeleaf:
     cache: false
 
-
-
+mybatis:
+  type-aliases-package: com.example.iterview.model
+  mapper-locations: mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
